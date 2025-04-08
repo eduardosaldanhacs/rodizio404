@@ -7,6 +7,9 @@ use Illuminate\Support\Facades\Route;
 // usuários não autenticados
 Route::middleware('guest')->group(function(){
 
+    Route::get('/', [MainController::class, 'index'])->name('index');
+    Route::get('/sabores/{id}', [MainController::class, 'detalhe'])->name('sabores.detalhe');
+
     // login routes
     Route::get('/login', [AuthController::class, 'login'])->name('login');
     Route::post('/login', [AuthController::class, 'authenticate'])->name('authenticate');
@@ -29,7 +32,7 @@ Route::middleware('guest')->group(function(){
 
 Route::middleware('auth')->group(function(){
     
-    Route::get('/', [MainController::class, 'home'])->name('home');
+    Route::get('/home', [MainController::class, 'home'])->name('home');
     
     // profile - change password
     Route::get('/profile', [AuthController::class, 'profile'])->name('profile');
