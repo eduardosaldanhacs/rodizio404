@@ -3,13 +3,10 @@
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-6">
-                <div class="card p-5">
+                <div class="card p-5 border border-secondary">
                     <p class="display-6 text-center">LOGIN</p>
-
                     <form action="{{ route('authenticate') }}" method="post">
-
                         @csrf
-
                         <div class="mb-3">
                             <label for="username" class="form-label">Usuário</label>
                             <input type="text" class="form-control" id="username" name="username" value="{{ old('username') }}">

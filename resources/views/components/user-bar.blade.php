@@ -1,36 +1,58 @@
-<div class="container-fluid bg-dark text-white shadow-sm">
-    <div class="row align-items-center py-3">
-        <!-- Logo e Nome da Pizzaria -->
-        <div class="col-md-4 d-flex align-items-center">
-            <a href="{{ route('index') }}" class="d-flex align-items-center text-white text-decoration-none">
-                <img src="{{ asset('assets/images/logo.png') }}" alt="Rodízio404" height="50" class="me-3">
-                <h4 class="m-0 fw-bold">Rodízio404</h4>
-            </a>
-        </div>
+<nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{{ route('index') }}">Rodizio 404</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
+            aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{{ route('login') }}"><i
+                            class="fas fa-pizza-slice me-1"></i>Cardápio</a>
+                </li>
+                {{-- <li class="nav-item">
+                    <a class="nav-link text-white" href="{{ route('login') }}"><i
+                            class="fas fa-tags me-1"></i>Promoções</a>
+                </li> --}}
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{{ route('login') }}"><i
+                            class="fas fa-info-circle me-1"></i>Sobre
+                        Nós</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{{ route('login') }}"><i
+                            class="fas fa-phone-alt me-1"></i>Contato</a>
 
-        <!-- Navegação -->
-        <div class="col-md-5">
-            <nav class="nav justify-content-center">
-                <a class="nav-link text-white" href="{{ route('login') }}"><i class="fas fa-pizza-slice me-1"></i>Cardápio</a>
-                <a class="nav-link text-white" href="{{ route('login') }}"><i class="fas fa-tags me-1"></i>Promoções</a>
-                <a class="nav-link text-white" href="{{ route('login') }}"><i class="fas fa-info-circle me-1"></i>Sobre Nós</a>
-                <a class="nav-link text-white" href="{{ route('login') }}"><i class="fas fa-phone-alt me-1"></i>Contato</a>
-            </nav>
-        </div>
+                </li>
+            </ul>
+            <div class="">
 
-        <!-- Carrinho e Login -->
-        <div class="col-md-3 text-end">
-            <a href="{{ route('login') }}" class="btn btn-outline-light me-2">
-                <i class="fas fa-shopping-cart me-1"></i> Carrinho
-            </a>
-            <a href="{{ route('login') }}" class="btn btn-warning">
-                <i class="fas fa-sign-in-alt me-1"></i> Entrar
-            </a>
-            @auth
-                <a href="{{ route('logout') }}" class="btn btn-danger">
-                    <i class="fas fa-sign-out-alt me-1"></i> Sair
-                </a>    
-            @endauth
+                <a href="{{ route('login') }}" class="btn btn-outline-light me-2">
+                    <i class="fas fa-shopping-cart me-1"></i> Carrinho
+                </a>
+                @guest
+                    <a href="{{ route('login') }}" class="btn btn-warning">
+                        <i class="fas fa-sign-in-alt me-1"></i> Entrar
+                    </a>
+                @endguest
+                @auth
+                    <a href="{{ route('logout') }}" class="btn btn-danger">
+                        <i class="fas fa-sign-out-alt me-1"></i> Sair
+                    </a>
+                    <li class="dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                            aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Separated link</a>
+                        </div>
+                    </li>
+                @endauth
+            </div>
         </div>
     </div>
-</div>
+</nav>

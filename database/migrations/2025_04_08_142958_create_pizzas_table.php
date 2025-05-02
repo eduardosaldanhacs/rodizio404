@@ -13,11 +13,13 @@ return new class extends Migration
     {
         Schema::create('pizzas', function (Blueprint $table) {
             $table->id();
-            $table->string('nome');
-            $table->text('descricao')->nullable();
-            $table->decimal('preco_p', 8, 2)->nullable(); // pequeno
-            $table->decimal('preco_m', 8, 2)->nullable(); // médio
-            $table->decimal('preco_g', 8, 2)->nullable(); // grande
+            $table->string('name');
+            $table->text('flavor')->nullable();
+            $table->text('history')->nullable();
+            $table->string('image')->nullable();
+            $table->decimal('small_price', 8, 2)->nullable(); // pequeno
+            $table->decimal('medium_price', 8, 2)->nullable(); // médio
+            $table->decimal('large_price', 8, 2)->nullable(); // grande
             $table->timestamps();
         });
     }

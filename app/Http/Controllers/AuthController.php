@@ -150,7 +150,7 @@ class AuthController extends Controller
         
         // apresentar view de sucesso
         //return view('auth.email_sent', ['email' => $user->email]);
-        return view('login');
+        return redirect()->route('login');
     }
 
     public function new_user_confirmation($token)
