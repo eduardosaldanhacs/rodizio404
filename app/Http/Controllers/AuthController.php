@@ -127,26 +127,30 @@ class AuthController extends Controller
         $user->username = $request->username;
         $user->email = $request->email;
         $user->password = bcrypt($request->password);
-        $user->token = Str::random(64);
+        //$user->token = Str::random(64);
+        $user->email_verified_at = Carbon::now();
+        $user->token = null;
+        $user->active = true;
 
         // gerar link
-        $confirmation_link = route('new_user_confirmation', ['token' => $user->token]);
+        //$confirmation_link = route('new_user_confirmation', ['token' => $user->token]);
 
         // enviar email
-        $result = Mail::to($user->email)->send(new NewUserConfirmation($user->username, $confirmation_link));
+        //$result = Mail::to($user->email)->send(new NewUserConfirmation($user->username, $confirmation_link));
 
         // verificar se o email foi enviado com sucesso
-        if(!$result){
-            return back()->withInput()->with([
-                'server_error' => 'Ocorreu um erro ao enviar o email de confirmação.'
-            ]);
-        }
+        // if(!$result){
+        //     return back()->withInput()->with([
+        //         'server_error' => 'Ocorreu um erro ao enviar o email de confirmação.'
+        //     ]);
+        // }
 
         // criar o usuário na base de dados
         $user->save();
         
         // apresentar view de sucesso
-        return view('auth.email_sent', ['email' => $user->email]);
+        //return view('auth.email_sent', ['email' => $user->email]);
+        return view('login');
     }
 
     public function new_user_confirmation($token)

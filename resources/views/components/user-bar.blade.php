@@ -26,6 +26,11 @@
             <a href="{{ route('login') }}" class="btn btn-warning">
                 <i class="fas fa-sign-in-alt me-1"></i> Entrar
             </a>
+            @auth
+                <a href="{{ route('logout') }}" class="btn btn-danger">
+                    <i class="fas fa-sign-out-alt me-1"></i> Sair
+                </a>    
+            @endauth
         </div>
     </div>
 </div>
