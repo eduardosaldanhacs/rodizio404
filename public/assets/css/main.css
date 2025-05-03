@@ -1,0 +1,26 @@
+/* main.css */
+.py-45 {
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+
+.py-90 {
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+.flavor-title {
+    font-family: "Cinzel";
+    font-size: 2.5rem;
+    color: black;
+}
+
+.history-title {
+    font-family: "Cinzel";
+    color: black;
+}
+
+.famous-pizza {
+    height: 600px; 
+    box-shadow: 5px 3px 10px #696969;
+}
