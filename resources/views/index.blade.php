@@ -27,8 +27,8 @@
 
                             <h5 class="mb-2 history-title">História</h5>
                             <p>{{ Str::limit($pizza->history, 1200) }}</p>
-                            <a href="{{ route('sabores.detalhe', $pizza->id) }}"
-                                class="btn btn-primary btn-sm">Adicionar ao carrinho</a>
+                            @livewire('add-pizza', ['pizza' => $pizza], key($pizza->id))
+                            
                         </div>
                     @else
                         {{-- Par: Texto à esquerda --}}
@@ -42,8 +42,7 @@
 
                             <h5 class="mb-2 history-title">História</h5>
                             <p>{{ Str::limit($pizza->history, 1200) }}</p>
-                            <a href="{{ route('sabores.detalhe', $pizza->id) }}"
-                                class="btn btn-primary btn-sm">Adicionar ao carrinho</a>
+                            @livewire('add-pizza', ['pizza' => $pizza], key($pizza->id))
                         </div>
                     @endif
                 </div>

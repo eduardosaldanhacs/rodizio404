@@ -11,10 +11,6 @@
                     <a class="nav-link text-white" href="{{ route('login') }}"><i
                             class="fas fa-pizza-slice me-1"></i>Cardápio</a>
                 </li>
-                {{-- <li class="nav-item">
-                    <a class="nav-link text-white" href="{{ route('login') }}"><i
-                            class="fas fa-tags me-1"></i>Promoções</a>
-                </li> --}}
                 <li class="nav-item">
                     <a class="nav-link text-white" href="{{ route('login') }}"><i
                             class="fas fa-info-circle me-1"></i>Sobre
@@ -26,11 +22,12 @@
 
                 </li>
             </ul>
-            <div class="">
+            <div class="d-flex">
 
-                <a href="{{ route('login') }}" class="btn btn-outline-light me-2">
+                {{-- <a href="{{ route('login') }}" class="btn btn-outline-light me-2">
                     <i class="fas fa-shopping-cart me-1"></i> Carrinho
-                </a>
+                </a> --}}
+                @livewire('carrinho')
                 @guest
                     <a href="{{ route('login') }}" class="btn btn-warning">
                         <i class="fas fa-sign-in-alt me-1"></i> Entrar
