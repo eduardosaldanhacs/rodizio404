@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-# rodizio404
-=======
-# Sistema de uma pizzaria
->>>>>>> 004
+Sistema para barbearia feito com Laravel.
