@@ -1,1 +1,1 @@
-Sistema para barbearia feito com Laravel.
+Sistema para pizzaria feito com Laravel.
