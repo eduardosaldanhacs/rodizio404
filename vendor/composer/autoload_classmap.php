@@ -9,6 +9,8 @@ return array(
     'App\\Http\\Controllers\\AuthController' => $baseDir . '/app/Http/Controllers/AuthController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Controllers\\MainController' => $baseDir . '/app/Http/Controllers/MainController.php',
+    'App\\Livewire\\AddPizza' => $baseDir . '/app/Livewire/AddPizza.php',
+    'App\\Livewire\\Carrinho' => $baseDir . '/app/Livewire/Carrinho.php',
     'App\\Mail\\NewUserConfirmation' => $baseDir . '/app/Mail/NewUserConfirmation.php',
     'App\\Mail\\ResetPassword' => $baseDir . '/app/Mail/ResetPassword.php',
     'App\\Models\\Pizza' => $baseDir . '/app/Models/Pizza.php',

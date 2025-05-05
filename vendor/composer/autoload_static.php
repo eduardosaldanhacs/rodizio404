@@ -546,6 +546,8 @@ class ComposerStaticInitda9b7a1dc1dd923105198c572cc7df8d
         'App\\Http\\Controllers\\AuthController' => __DIR__ . '/../..' . '/app/Http/Controllers/AuthController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\MainController' => __DIR__ . '/../..' . '/app/Http/Controllers/MainController.php',
+        'App\\Livewire\\AddPizza' => __DIR__ . '/../..' . '/app/Livewire/AddPizza.php',
+        'App\\Livewire\\Carrinho' => __DIR__ . '/../..' . '/app/Livewire/Carrinho.php',
         'App\\Mail\\NewUserConfirmation' => __DIR__ . '/../..' . '/app/Mail/NewUserConfirmation.php',
         'App\\Mail\\ResetPassword' => __DIR__ . '/../..' . '/app/Mail/ResetPassword.php',
         'App\\Models\\Pizza' => __DIR__ . '/../..' . '/app/Models/Pizza.php',
