@@ -4,16 +4,23 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\MainController;
 use Illuminate\Support\Facades\Route;
 
+// pizza routes
+Route::get('/cardapio', [MainController::class, 'cardapio'])->name('cardapio');
+
+
+
 // usuários não autenticados
-Route::middleware('guest')->group(function(){
+Route::middleware('guest')->group(function () {
 
     Route::get('/', [MainController::class, 'index'])->name('index');
     Route::get('/sabores/{id}', [MainController::class, 'detalhe'])->name('sabores.detalhe');
 
+
+
     // login routes
     Route::get('/login', [AuthController::class, 'login'])->name('login');
     Route::post('/login', [AuthController::class, 'authenticate'])->name('authenticate');
-    
+
     // registration routes
     Route::get('/register', [AuthController::class, 'register'])->name('register');
     Route::post('/register', [AuthController::class, 'store_user'])->name('store_user');
@@ -30,10 +37,10 @@ Route::middleware('guest')->group(function(){
     Route::post('/reset_password', [AuthController::class, 'reset_password_update'])->name('reset_password_update');
 });
 
-Route::middleware('auth')->group(function(){
-    
+Route::middleware('auth')->group(function () {
+
     Route::get('/home', [MainController::class, 'home'])->name('home');
-    
+
     // profile - change password
     Route::get('/profile', [AuthController::class, 'profile'])->name('profile');
     Route::post('/profile', [AuthController::class, 'change_password'])->name('change_password');

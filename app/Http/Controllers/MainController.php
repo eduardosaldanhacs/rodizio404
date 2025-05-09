@@ -25,4 +25,10 @@ class MainController extends Controller
         $pizza = Pizza::findOrFail($id);
         return view('sabores.detalhe', ['pizza' => $pizza]);
     }
+
+    public function cardapio(): View
+    {
+        $pizzas = Pizza::all();
+        return view('cardapio', ['pizzas' => $pizzas]);
+    }
 }

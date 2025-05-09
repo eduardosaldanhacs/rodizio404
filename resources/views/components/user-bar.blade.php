@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+<nav class="navbar navbar-expand-lg bg-primary position-fixed top-0 w-100 z-3" data-bs-theme="dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="{{ route('index') }}">Sabor Gaudério</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
@@ -8,7 +8,7 @@
         <div class="collapse navbar-collapse" id="navbarColor01">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="{{ route('login') }}"><i
+                    <a class="nav-link text-white" href="{{ route('cardapio') }}"><i
                             class="fas fa-pizza-slice me-1"></i>Cardápio</a>
                 </li>
                 <li class="nav-item">
