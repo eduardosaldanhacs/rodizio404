@@ -2,11 +2,6 @@
     <section class="py-5" style="background-image: url('{{ asset('assets/images/background-1-low.jpg') }}'); background-size: cover; background-position: center;">
         <div class="container">
             <h2 class="text-center mb-5">Mais Pedidas</h2>
-        @php
-        //dd(session('carrinho'));
-
-        @endphp
-                
             @foreach ($pizzas as $pizza)
                 <div class="row justify-content-between align-items-center mb-5">
                     @if ($loop->iteration % 2 != 0)

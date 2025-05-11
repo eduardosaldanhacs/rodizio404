@@ -17,8 +17,9 @@ class AddPizza extends Component
     public function adicionarAoCarrinho()
     {
         $pizza = $this->pizza;
+    
         $carrinho = session()->get('carrinho', []);
-        
+    
         if (isset($carrinho[$pizza->id])) {
             $carrinho[$pizza->id]['quantidade']++;
         } else {
@@ -28,6 +29,7 @@ class AddPizza extends Component
                 'quantidade' => 1,
             ];
         }
+    
         session()->put('carrinho', $carrinho);
         $this->dispatch('notification', type: 'success', title: 'Produto adicionado!');
         $this->dispatch('pizzaAdded');
