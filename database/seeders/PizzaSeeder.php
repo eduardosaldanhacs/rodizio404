@@ -40,5 +40,56 @@ class PizzaSeeder extends Seeder
             'medium_price' => 35.00,
             'large_price' => 45.00,
         ]);
+
+        Pizza::create([
+            'name' => 'Campeira',
+            'flavor' => 'Charque desfiado, abóbora cabotiá assada, cebola roxa e queijo coalho.',
+            'image' => 'campeira.jpg',
+            'history' => 'A Campeira homenageia os sabores rústicos do campo. Uma combinação clássica do interior gaúcho, repaginada para conquistar o forno da pizzaria.',
+            'small_price' => 23.00,
+            'medium_price' => 33.00,
+            'large_price' => 43.00,
+        ]);
+        
+        Pizza::create([
+            'name' => 'Missioneira',
+            'flavor' => 'Carne moída temperada com cominho, azeitonas pretas, ovo cozido e muçarela.',
+            'image' => 'missioneira.jpg',
+            'history' => 'Inspirada na culinária das Missões Jesuíticas, essa pizza relembra os pastéis de forno recheados do interior com um toque todo especial.',
+            'small_price' => 21.00,
+            'medium_price' => 31.00,
+            'large_price' => 41.00,
+        ]);
+        
+        Pizza::create([
+            'name' => 'Pampa Veggie',
+            'flavor' => 'Cogumelos salteados, chimichurri artesanal, moranga assada e queijo de búfala.',
+            'image' => 'pampa_veggie.jpg',
+            'history' => 'A opção vegetariana para quem quer o sabor do sul com leveza e criatividade. A Pampa Veggie mostra que tradição e inovação podem caminhar juntas.',
+            'small_price' => 24.00,
+            'medium_price' => 34.00,
+            'large_price' => 44.00,
+        ]);
+
+        Pizza::create([
+            'name' => 'Estância Doce',
+            'flavor' => 'Doce de leite cremoso, banana caramelizada, canela e farofa de amendoim.',
+            'image' => 'estancia_doce.jpg',
+            'history' => 'A sobremesa que nasceu nas estâncias gaúchas agora vira pizza! Um sabor doce com alma campeira, perfeita pra fechar o churrasco com chave de ouro.',
+            'small_price' => 18.00,
+            'medium_price' => 26.00,
+            'large_price' => 34.00,
+        ]);
+
+        Pizza::create([
+            'name' => 'Serra Colonial',
+            'flavor' => 'Calabresa artesanal, queijo colonial, tomate italiano e manjericão fresco.',
+            'image' => 'serra_colonial.jpg',
+            'history' => 'Direto da serra gaúcha, essa pizza traz os sabores das cantinas familiares com um toque da imigração italiana que ajudou a construir o Rio Grande.',
+            'small_price' => 22.00,
+            'medium_price' => 32.00,
+            'large_price' => 42.00,
+        ]);
+        
     }
 }

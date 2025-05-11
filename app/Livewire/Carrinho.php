@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Livewire;
 
 use App\Models\Pizza;
@@ -23,7 +24,7 @@ class Carrinho extends Component
         $this->carrinho = [];
         $this->dispatch('notification', type: 'success', title: 'Carrinho limpo!');
     }
-    
+
 
     public function toggleCarrinho()
     {
@@ -34,7 +35,15 @@ class Carrinho extends Component
         }
     }
 
-    
+    public function getTotalProperty(): float
+    {
+        return array_reduce($this->carrinho, function ($carry, $item) {
+            return $carry + ($item['small_price'] * $item['quantidade']);
+        }, 0);
+    }
+
+
+
 
     public function mount()
     {

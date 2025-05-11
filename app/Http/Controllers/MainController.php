@@ -16,7 +16,7 @@ class MainController extends Controller
 
     public function index(): View
     {
-        $pizzas = Pizza::latest()->take(6)->get();
+        $pizzas = Pizza::latest()->take(4)->get();
         return view('index', ['pizzas' => $pizzas]);
     }
 
@@ -24,5 +24,16 @@ class MainController extends Controller
     {
         $pizza = Pizza::findOrFail($id);
         return view('sabores.detalhe', ['pizza' => $pizza]);
+    }
+
+    public function cardapio(): View
+    {
+        $pizzas = Pizza::all();
+        return view('cardapio', ['pizzas' => $pizzas]);
+    }
+
+    public function sobre_nos(): View
+    {
+        return view('sobre-nos');
     }
 }
