@@ -7,7 +7,8 @@
                     <div class="card-body">
                         <div class="col-12">
                             <p class="card-text">A Sabor Gaudério é uma pizzaria que se destaca pela qualidade e sabor de
-                                suas pizzas. Com uma variedade de sabores e ingredientes frescos, oferecemos uma experiência
+                                suas pizzas. Com uma variedade de sabores e ingredientes frescos, oferecemos uma
+                                experiência
                                 gastronômica única para nossos clientes. Nossa missão é proporcionar momentos especiais
                                 através de nossas deliciosas pizzas.
                             </p>
@@ -30,11 +31,15 @@
                             da serra gaúcha, cresceu entre vinhedos e receitas de família guardadas a sete chaves nas
                             cozinhas das nonas.
                         </p>
-                        <img src="{{ asset('assets/images/team/img3.jpg') }}" class="card-img-top"
-                        style="height: 400px" alt="Sobre Nós">
-                        <img src="{{ asset('assets/images/team/img4.jpg') }}" class="card-img-top"
-                        style="height: 400px" alt="Sobre Nós">
+                        <img src="{{ asset('assets/images/team/img3.jpg') }}" class="card-img-top" style="height: 400px"
+                            alt="Sobre Nós">
+                        <img src="{{ asset('assets/images/team/img4.jpg') }}" class="card-img-top" style="height: 400px"
+                            alt="Sobre Nós">
 
                         <p class="card-text mt-3">Esperamos vê-lo em breve!</p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </x-layouts.site-layout>

@@ -7,12 +7,11 @@ use Illuminate\Support\Facades\Route;
 // pizza routes
 Route::get('/cardapio', [MainController::class, 'cardapio'])->name('cardapio');
 Route::get('/sobre-nos', [MainController::class, 'sobre_nos'])->name('sobre-nos');
-
+Route::get('/', [MainController::class, 'index'])->name('index');
 
 // usuários não autenticados
 Route::middleware('guest')->group(function () {
 
-    Route::get('/', [MainController::class, 'index'])->name('index');
     Route::get('/sabores/{id}', [MainController::class, 'detalhe'])->name('sabores.detalhe');
 
 

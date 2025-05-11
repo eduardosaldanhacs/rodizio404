@@ -1,7 +1,7 @@
 <x-layouts.site-layout pageTitle="Login">
 
-    <div class="container mt-5">
-        <div class="row justify-content-center">
+    <div class="container my-5">
+        <div class="row justify-content-center align-items-center">
             <div class="col-6">
                 <div class="card p-5 border border-secondary">
                     <p class="display-6 text-center">LOGIN</p>
