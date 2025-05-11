@@ -16,7 +16,7 @@ class MainController extends Controller
 
     public function index(): View
     {
-        $pizzas = Pizza::latest()->take(4)->get();
+        $pizzas = Pizza::latest()->take(6)->get();
         return view('index', ['pizzas' => $pizzas]);
     }
 
